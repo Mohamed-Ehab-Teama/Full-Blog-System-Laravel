@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remake Barber - Category</title>
-	<link rel="icon" href="{{ asset('assets') }}/img/Fevicon.png" type="image/png">
+  <link rel="icon" href="{{ asset('assets') }}/img/Fevicon.png" type="image/png">
 
   <link rel="stylesheet" href="{{ asset('assets') }}/vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('assets') }}/vendors/fontawesome/css/all.min.css">
@@ -16,6 +17,7 @@
 
   <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
 </head>
+
 <body>
   <!--================Header Menu Area =================-->
   <header class="header_area">
@@ -32,7 +34,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Categories</a>
@@ -44,7 +46,7 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
-            
+
             <!-- Add new blog -->
             <a href="#" class="btn btn-sm btn-primary mr-2">Add New</a>
             <!-- End - Add new blog -->
@@ -59,14 +61,14 @@
                 </ul>
               </li> -->
             </ul>
-          </div> 
+          </div>
         </div>
       </nav>
     </div>
   </header>
   <!--================Header Menu Area =================-->
-  
-  <!--================ Hero sm Banner start =================-->        
+
+  <!--================ Hero sm Banner start =================-->
   <section class="mb-30px">
     <div class="container">
       <div class="hero-banner hero-banner--sm">
@@ -82,8 +84,8 @@
       </div>
     </div>
   </section>
-  <!--================ Hero sm Banner end =================-->      
-  
+  <!--================ Hero sm Banner end =================-->
+
 
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin">
@@ -102,8 +104,8 @@
                 </div>
                 <div class="details mt-20">
                   <a href="blog-single.html">
-                    <h3>Fast cars and rickety bridges as 
-                        he grand tour returns</h3>
+                    <h3>Fast cars and rickety bridges as
+                      he grand tour returns</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -122,7 +124,7 @@
                 <div class="details mt-20">
                   <a href="blog-single.html">
                     <h3>Harvey Weinstein's senual assault
-                        trial set for May</h3>
+                      trial set for May</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -140,8 +142,8 @@
                 </div>
                 <div class="details mt-20">
                   <a href="blog-single.html">
-                    <h3>Fast cars and rickety bridges as 
-                        he grand tour returns</h3>
+                    <h3>Fast cars and rickety bridges as
+                      he grand tour returns</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -160,7 +162,7 @@
                 <div class="details mt-20">
                   <a href="blog-single.html">
                     <h3>Harvey Weinstein's senual assault
-                        trial set for May</h3>
+                      trial set for May</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -178,8 +180,8 @@
                 </div>
                 <div class="details mt-20">
                   <a href="blog-single.html">
-                    <h3>Fast cars and rickety bridges as 
-                        he grand tour returns</h3>
+                    <h3>Fast cars and rickety bridges as
+                      he grand tour returns</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -198,7 +200,7 @@
                 <div class="details mt-20">
                   <a href="blog-single.html">
                     <h3>Harvey Weinstein's senual assault
-                        trial set for May</h3>
+                      trial set for May</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -216,8 +218,8 @@
                 </div>
                 <div class="details mt-20">
                   <a href="blog-single.html">
-                    <h3>Fast cars and rickety bridges as 
-                        he grand tour returns</h3>
+                    <h3>Fast cars and rickety bridges as
+                      he grand tour returns</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -236,7 +238,7 @@
                 <div class="details mt-20">
                   <a href="blog-single.html">
                     <h3>Harvey Weinstein's senual assault
-                        trial set for May</h3>
+                      trial set for May</h3>
                   </a>
                   <p>Vel aliquam quis, nulla pede mi commodo no tristique nam hac luctus torquent velit felis lone commodo pellentesque</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -305,30 +307,30 @@
             </div>
           </div> -->
 
-          
+
 
           <div class="row">
             <div class="col-lg-12">
-                <nav class="blog-pagination justify-content-center d-flex">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a href="#" class="page-link" aria-label="Previous">
-                                <span aria-hidden="true">
-                                    <i class="ti-angle-left"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item">
-                            <a href="#" class="page-link" aria-label="Next">
-                                <span aria-hidden="true">
-                                    <i class="ti-angle-right"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+              <nav class="blog-pagination justify-content-center d-flex">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                      <span aria-hidden="true">
+                        <i class="ti-angle-left"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                  <li class="page-item"><a href="#" class="page-link">2</a></li>
+                  <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                      <span aria-hidden="true">
+                        <i class="ti-angle-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -519,8 +521,10 @@
       </div>
       <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
         <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          Copyright &copy;<script>
+            document.write(new Date().getFullYear());
+          </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
       </div>
     </div>
   </footer>
@@ -533,4 +537,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="{{ asset('assets') }}/js/mail-script.js"></script>
   <script src="{{ asset('assets') }}/js/main.js"></script>
 </body>
+
 </html>
