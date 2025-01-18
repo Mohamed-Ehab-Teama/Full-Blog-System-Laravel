@@ -4,7 +4,6 @@
 
 @section('contact-active', 'active')
 
-
 @section('content')
     @include('theme.partials.hero', ['title' => 'Contact'])
 
