@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
+// Theme Routes
 Route::controller(ThemeController::class)->name('theme.')->group(function (){
     Route::get('/','index')->name('index');
     Route::get('/category','category')->name('category');
@@ -17,6 +18,9 @@ Route::controller(ThemeController::class)->name('theme.')->group(function (){
     // Route::get('/login','login')->name('login');
     // Route::get('/register','register')->name('register');
 });
+
+// Subscribers Routes
+Route::post('/subscriber/store', [SubscriberController::class, 'store'])->name('subscriber.store');
 
 
 
