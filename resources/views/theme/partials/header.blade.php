@@ -29,8 +29,8 @@
                             @if (count($headerCategories) > 0)
                                 <ul class="dropdown-menu">
                                     @foreach ($headerCategories as $category)
-                                        <li class="nav-item"><a class="nav-link"
-                                                href=" {{ route('theme.category') }} "> {{ $category->name }} </a></li>
+                                        <li class="nav-item"><a class="nav-link" href=" {{ route('theme.category', ['id' => $category->id]) }} ">
+                                                {{ $category->name }} </a></li>
                                     @endforeach
                                 </ul>
                             @endif
@@ -41,7 +41,9 @@
                     </ul>
 
                     <!-- Add new blog -->
-                    <a href="#" class="btn btn-sm btn-primary mr-2">Add New</a>
+                    @if (Auth::check())
+                        <a href="{{ route('blogs.create') }}" class="btn btn-sm btn-primary mx-3">Add New</a>
+                    @endif
                     <!-- End - Add new blog -->
 
                     <ul class="nav navbar-nav navbar-right navbar-social">
@@ -56,7 +58,7 @@
                                     <li class="nav-item">
                                         <form action="{{ route('logout') }}" method="post">
                                             @csrf
-                                            <a class="nav-link" href="javascript:$('form').submit();">LogOut</a>
+                                            <button type="submit" class="nav-link">LogOut</button>
                                         </form>
                                     </li>
                                 </ul>
