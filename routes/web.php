@@ -31,6 +31,7 @@ Route::post('/contact/store', [ContactController::class, 'store'])->name('contac
 
 
 // Blog Routes
+Route::get('/my-blogs', [BlogController::class, 'myBlogs'])->name('blogs.myBlogs');
 Route::resource('blogs', BlogController::class );
 
 
