@@ -19,9 +19,9 @@
                         @if (count($catBlogs) > 0)
                             @foreach ($catBlogs as $blog)
                                 <div class="col-md-6">
-                                    <div class="single-recent-blog-post card-view">
+                                    <div class="single-recent-blog-post card-view w-100 h-100">
                                         <div class="thumb">
-                                            <img class="card-img rounded-0"
+                                            <img class="card-img rounded-0 mb-5"
                                                 src="{{ asset('storage') }}/blogs/{{ $blog->image }}" alt="">
                                             <ul class="thumb-info">
                                                 <li><a href="#"><i class="ti-user"></i> {{ $blog->user->name }} </a></li>
@@ -33,7 +33,7 @@
                                                 <h3> {{ $blog->name }} </h3>
                                             </a>
                                             <p> {{ $blog->description }} </p>
-                                            <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+                                            <a class="button" href="{{ route('blogs.show', parameters: ['blog' => $blog] ) }}">Read More <i class="ti-arrow-right"></i></a>
                                         </div>
                                     </div>
 

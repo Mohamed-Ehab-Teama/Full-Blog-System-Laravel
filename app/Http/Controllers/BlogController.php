@@ -61,7 +61,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('theme.single-blog', compact('blog'));
     }
 
     /**

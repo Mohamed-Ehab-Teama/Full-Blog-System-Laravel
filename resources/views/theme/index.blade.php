@@ -34,7 +34,7 @@
                             @foreach ($allBlogs as $blog)
                                 <div class="single-recent-blog-post">
                                     <div class="thumb">
-                                        <img class="img-fluid w-100" src="{{ asset('storage') }}/blogs/{{ $blog->image }}"
+                                        <img class="img-fluid w-75 h-25" src="{{ asset('storage') }}/blogs/{{ $blog->image }}"
                                             alt="">
                                         <ul class="thumb-info">
                                             <li><a href="#"><i class="ti-user"></i> {{ $blog->user->name }} </a>
@@ -48,7 +48,7 @@
                                             <h3>  {{ $blog->name }}  </h3>
                                         </a>
                                         <p> {{ $blog->description }} </p>
-                                        <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+                                        <a class="button" href="{{ route('blogs.show', parameters: ['blog' => $blog] ) }}">Read More <i class="ti-arrow-right"></i></a>
                                     </div>
                                 </div>
                             @endforeach
