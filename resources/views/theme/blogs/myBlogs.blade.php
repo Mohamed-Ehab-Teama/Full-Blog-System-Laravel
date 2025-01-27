@@ -12,6 +12,12 @@
         <div class="row">
             <div class="col-12">
 
+                @if (session('BlogDeleteStatus'))
+                <div class="alert alert-success">
+                    {{ session('BlogDeleteStatus') }}
+                </div>
+                @endif
+
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -27,8 +33,12 @@
                                 <a href="{{ route('blogs.show', ['blog' => $blog]) }}"> {{ $blog->name }} </a>
                             </td>
                             <td>
-                                <a  href="{{ route('blogs.edit', ['blog' => $blog]) }}" class="btn btn-primary mx-2 "> Edit </a>
-                                <a  href="#" class="btn btn-danger mx-2 "> Delete </a>
+                                <a href="{{ route('blogs.edit', ['blog' => $blog]) }}" class="btn btn-primary mx-2 "> Edit </a>
+                                <form class="d-inline" method="post" action="{{route('blogs.destroy', ['blog' => $blog] )}}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger mx-2 "> Delete </button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach

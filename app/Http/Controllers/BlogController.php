@@ -38,23 +38,25 @@ class BlogController extends Controller
      */
     public function store(StoreBlogRequest $request)
     {
-        $data = $request->validated();
+        if (Auth::check()) {
+            $data = $request->validated();
 
-        // Image Uploading:
-        // 1- Get Image
-        $image = $request->image;
-        // 2- Change Image's Name
-        $newImageName = time() . '--' . $image->getClientOriginalName();
-        // 3- Move Image To our project
-        $image->storeAs('blogs', $newImageName, 'public');
-        // 4- Save the new name to the DB
-        $data['image'] = $newImageName;
-        $data['user_id'] = Auth::user()->id;
+            // Image Uploading:
+            // 1- Get Image
+            $image = $request->image;
+            // 2- Change Image's Name
+            $newImageName = time() . '--' . $image->getClientOriginalName();
+            // 3- Move Image To our project
+            $image->storeAs('blogs', $newImageName, 'public');
+            // 4- Save the new name to the DB
+            $data['image'] = $newImageName;
+            $data['user_id'] = Auth::user()->id;
 
-        // Create New Record
-        Blog::create($data);
+            // Create New Record
+            Blog::create($data);
 
-        return back()->with('BlogCreateStatus', "Your Blog have been Created Successfully");
+            return back()->with('BlogCreateStatus', "Your Blog have been Created Successfully");
+        }
     }
 
     /**
@@ -113,7 +115,15 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        if ($blog->user_id == Auth::user()->id) {
+            // delete Image From Storage
+            Storage::delete("public/blogs/$blog->image");
+            // Delete the Record:
+            $blog->delete();
+
+            return back()->with('BlogDeleteStatus', "Your Blog have been Deleted Successfully");
+        }
+        abort(403);
     }
 
 
