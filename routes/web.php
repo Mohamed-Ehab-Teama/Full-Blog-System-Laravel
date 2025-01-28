@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ThemeController;
 use App\Http\Controllers\ContactController;
@@ -35,8 +36,8 @@ Route::get('/my-blogs', [BlogController::class, 'myBlogs'])->name('blogs.myBlogs
 Route::resource('blogs', BlogController::class );
 
 
-
-
+// Comment Routes
+Route::post('/comments/store', [CommentController::class, 'store'])->name('comments.store');
 
 
 
