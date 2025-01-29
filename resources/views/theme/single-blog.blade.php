@@ -34,9 +34,15 @@
                         <p> {{ $blog->description }} </p>
                     </div>
 
+                    @if (session('ReplyMadeMessage'))
+                        <div class="alert alert-success">
+                            {{ session('ReplyMadeMessage') }}
+                        </div>
+                    @endif
+
                     @if (count($blog->comments) > 0)
                         <div class="comments-area">
-                            <h4> {{count($blog->comments)}} Comments</h4>
+                            <h4> {{ count($blog->comments) }} Comments</h4>
                             @foreach ($blog->comments as $comment)
                                 <div class="comment-list">
                                     <div class="single-comment justify-content-between d-flex">
@@ -48,8 +54,34 @@
                                                 <h5><a href="#"> {{ $comment->name }} </a></h5>
                                                 <p class="date"> {{ $comment->created_at->format('d-M-Y  H:i A') }} </p>
                                                 <p class="comment">
-                                                    {{ $comment->message }} 
+                                                    {{ $comment->message }}
                                                 </p>
+
+                                                {{-- Make Reply --}}
+                                                <form method="post" action="{{ route('comment.reply.store') }}">
+                                                    @csrf
+
+                                                    <input type="hidden" name="parent_id" value="{{ $comment->id }}">
+
+                                                    <input type="text" class="form-control" name="name"
+                                                        placeholder="Enter Name" onfocus="this.placeholder = ''"
+                                                        onblur="this.placeholder = 'Enter Name'">
+                                                    <x-input-error :messages="$errors->get('name')" class="mx-5 mt-1 text-danger" />
+
+                                                    <textarea name="reply" class="form-control my-2" cols="50" rows="1" placeholder = 'Enter Reply'"></textarea>
+                                                    <x-input-error :messages="$errors->get('reply')" class="mx-5 mt-1 text-danger" />
+
+                                                    <button type="submit" class="btn btn-outline-primary"> Reply </button>
+                                                </form>
+
+                                                {{-- Check if There are Replies : Show Them --}}
+                                                @if (count($comment->replies) > 0)
+                                                        @include('theme.partials.replies', [
+                                                        'comments' => $comment->replies,
+                                                    ])
+                                                @endif
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +91,7 @@
                     @endif
 
                     <div class="comment-form">
-                        <h4>Leave a Reply</h4>
+                        <h4>Leave a Comment</h4>
 
                         @if (session('CommentMadeMessage'))
                             <div class="alert alert-success">

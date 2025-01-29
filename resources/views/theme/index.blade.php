@@ -37,8 +37,8 @@
                                         src="{{ asset("storage/blogs/$blog->image") }}" alt="">
                                 </div>
                                 <div class="blog__slide__content">
-                                    <a class="blog__slide__label" href="#"> {{$blog->name}} </a>
-                                    <h3><a href="#"> {{$blog->description}} </a></h3>
+                                    <a class="blog__slide__label" href="{{route('blogs.show', ['blog' => $blog])}}"> {{$blog->name}} </a>
+                                    <h3><a> {{$blog->description}} </a></h3>
                                     <p> {{ date('d') - $blog->updated_at->format('d') }} days ago</p>
                                 </div>
                             </div>
@@ -70,11 +70,11 @@
                                             </li>
                                             <li><a href="#"><i class="ti-notepad"></i>
                                                     {{ $blog->created_at->format('d M Y') }} </a></li>
-                                            <li><a href="#"><i class="ti-themify-favicon"></i> 2 Comments </a></li>
+                                            <li><a href="#"><i class="ti-themify-favicon"></i> {{ count($blog->comments) ?? '0' }} </a></li>
                                         </ul>
                                     </div>
                                     <div class="details mt-20">
-                                        <a href="blog-single.html">
+                                        <a>
                                             <h3> {{ $blog->name }} </h3>
                                         </a>
                                         <p> {{ $blog->description }} </p>

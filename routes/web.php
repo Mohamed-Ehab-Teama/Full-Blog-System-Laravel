@@ -40,6 +40,10 @@ Route::resource('blogs', BlogController::class );
 Route::post('/comments/store', [CommentController::class, 'store'])->name('comments.store');
 
 
+// Comment Reply Route
+Route::post('/comment/reply/store', [CommentController::class, 'replyStore'])->name('comment.reply.store');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
